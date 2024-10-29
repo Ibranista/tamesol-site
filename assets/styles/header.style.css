@@ -1,81 +1,102 @@
 nav {
-  max-width: 80%;
-  margin: auto;
-  padding: 10px 0;
+    max-width: 80%;
+    margin: auto;
+    padding: 10px 0;
 }
+
 .d-flex {
-  display: flex;
+    display: flex;
 }
+
 .justify-between {
-  justify-content: space-between;
+    justify-content: space-between;
 }
+
 .items-center {
-  align-items: center;
+    align-items: center;
 }
+
 .list-none {
-  list-style: none;
+    list-style: none;
 }
+
 .nav_items_wrapper {
-  gap: 2rem;
+    gap: 2rem;
 }
+
 /* Styling for nav items */
 .nav_links ul {
-  display: flex;
-  margin: 0;
-  padding: 0;
+    display: flex;
+    margin: 0;
+    padding: 0;
 }
-.nav_links li {
-  padding: 0 15px;
+
+.nav_links .menu-main-menu-container li {
+    padding: 0 15px;
+    list-style-type: none;
 }
+
+.nav_links .menu-main-menu-container li a {
+    text-decoration: none;
+    color: #000 !important;
+}
+
 .contact_us_btn {
-  background-color: #264aa5;
-  color: white;
-  padding: 16px 24px;
-  border: none;
-  border-radius: 5px;
-  cursor: pointer;
+    background-color: #264aa5;
+    color: white;
+    padding: 16px 24px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
 }
+
 /* Mobile menu */
 .hamburger {
-  display: none;
-  flex-direction: column;
-  cursor: pointer;
-  gap: 4px;
+    display: none;
+    flex-direction: column;
+    cursor: pointer;
+    gap: 4px;
 }
+
 .hamburger span {
-  display: block;
-  width: 25px;
-  height: 3px;
-  background-color: black;
+    display: block;
+    width: 25px;
+    height: 3px;
+    background-color: black;
 }
 
 @media (max-width: 1024px) {
-  .nav_links ul {
-    display: none;
-    position: absolute;
-    top: 60px;
-    left: 0;
-    width: 100%;
-    background-color: white;
-    flex-direction: column;
-    gap: 15px;
-    padding: 10px;
-  }
-  .nav_links ul.show {
-    display: flex;
-  }
-  .hamburger {
-    display: flex;
-  }
-  .contact_us_btn {
-    padding: 8px 16px;
-    font-size: 14px;
-  }
-  .nav_items_wrapper {
-    gap: 0;
-    text-align: center;
-  }
-  .logo_wrapper img {
-    width: 120px;
-  }
+    .nav_links ul {
+        display: none;
+        position: absolute;
+        top: 110px;
+        left: 0;
+        width: 100%;
+        background-color: white;
+        flex-direction: column;
+        gap: 15px;
+        padding: 10px;
+    }
+
+    .nav_links ul.show {
+        display: flex;
+    }
+
+    .hamburger {
+        display: flex;
+    }
+
+    .contact_us_btn {
+        padding: 8px 16px;
+        font-size: 14px;
+    }
+
+    .nav_items_wrapper {
+        gap: 0;
+        text-align: center;
+    }
+
+    .logo_wrapper img {
+        width: 120px;
+    }
 }
