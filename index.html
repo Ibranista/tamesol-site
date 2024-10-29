@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <style>
+    /* Responsive styles */
+    @media (max-width: 1024px) {
+      .nav_links ul {
+        display: none; /* Hide menu items initially on small screens */
+        position: absolute;
+        top: 60px;
+        left: 0;
+        width: 100%;
+        background-color: white;
+        flex-direction: column;
+        gap: 15px;
+        padding: 10px;
+      }
+      .nav_links ul.show {
+        display: flex; /* Show menu items when "show" class is added */
+      }
+      .hamburger {
+        display: flex; /* Show hamburger on small screens */
+      }
+      .contact_us_btn {
+        padding: 8px 16px;
+        font-size: 14px;
+      }
+      .nav_items_wrapper {
+        gap: 0;
+        text-align: center;
+      }
+      .logo_wrapper img {
+        width: 120px; /* Resize logo for mobile */
+      }
+    }
+  </style>
+  <body>
+    <nav class="d-flex justify-between items-center">
+      <section class="logo_wrapper">
+        <img src="./assets/images/Logo.png" alt="Logo" />
+      </section>
+      <section class="nav_links">
+        <ul class="d-flex list-none nav_items_wrapper">
+          <li>Home</li>
+          <li>About</li>
+          <li>Services</li>
+          <li>Projects</li>
+          <li>People</li>
+        </ul>
+      </section>
+      <section class="contact_wrapper">
+        <button class="contact_us_btn">Contact Us</button>
+      </section>
+      <!-- Hamburger menu icon -->
+      <div class="hamburger" onclick="toggleMenu()">
+        <span></span>
+        <span></span>
+        <span></span>
+      </div>
+    </nav>
+
+    <script>
+      function toggleMenu() {
+        const navLinks = document.querySelector(".nav_links ul");
+        navLinks.classList.toggle("show");
+      }
+    </script>
+  </body>
+</html>
