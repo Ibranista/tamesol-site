@@ -1,0 +1,57 @@
+.about_page_wrapper {
+  position: relative; /* Needed for positioning the pseudo-element */
+  width: 100%;
+  margin-inline: auto;
+  padding: 80px 20px;
+  text-align: center;
+  color: #fff;
+  overflow: hidden; /* Ensures pseudo-element doesn't overflow */
+}
+
+.about_page_wrapper::before {
+  content: ""; /* Required for the pseudo-element */
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(0, 173, 238, 0.44); /* Blue color with 44% opacity */
+  z-index: 1; /* Places it below text but above background */
+}
+
+.about_page_wrapper::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: url("../images/about_us_hero.png") no-repeat center/cover;
+  opacity: 0.44; /* Adjusts opacity of the image */
+  z-index: 0; /* Places it behind the overlay */
+}
+
+.about_page_wrapper h1 {
+  font-size: 48px;
+  margin-bottom: 10px;
+}
+.about_page_wrapper p {
+  font-size: 18px;
+  line-height: 27px;
+}
+
+.about-section {
+  position: relative;
+  z-index: 10;
+  max-width: 840px;
+  margin-inline: auto;
+}
+
+@media (max-width: 768px) {
+  .about_page_wrapper h1 {
+    font-size: 2em;
+  }
+  .about_page_wrapper p {
+    font-size: 1em;
+  }
+}

@@ -15,6 +15,8 @@ function tamesontheme_enqueue_styles()
     wp_enqueue_style('frontpage-style', get_template_directory_uri() . '/assets/styles/frontpage.style.css');
     // footer styles
     wp_enqueue_style('footer-style', get_template_directory_uri() . '/assets/styles/footer.style.css');
+    // about us page
+    wp_enqueue_style('about-page-style', get_template_directory_uri() . '/assets/styles/about.style.css');
     // gsap for the carousel section on front-page
     wp_enqueue_script(
         'gsap',
