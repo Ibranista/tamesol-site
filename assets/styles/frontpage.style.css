@@ -529,8 +529,10 @@ section.trusted_by_section {
   flex-direction: column;
   justify-content: center;
   gap: 33px;
-  padding-inline: 10px;
+  padding-inline: 20px;
   box-sizing: border-box;
+  margin-bottom: 64px;
+  margin-top: 32px;
 }
 
 div.company_gained_wrapper {
@@ -547,9 +549,33 @@ div.gained_trusts {
   grid-template-columns: repeat(4, 1fr);
 }
 
+div.trusted_header_title {
+  border: 1px solid #00ADEE;
+  border-radius: 50px;
+  max-width: 276px;
+  width: 100%;
+  margin-inline: auto;
+  padding: 20px 34px;
+  box-sizing: border-box;
+}
+
+div.trusted_header_title>h2.trusted_by_title {
+  font-family: Barlow;
+  font-size: 18px;
+  font-weight: 500;
+  line-height: 21.6px;
+  text-align: center;
+  padding: 0;
+  margin: 0;
+}
+
 @media (max-width:768px) {
 
   /* trusted by section */
+  section.trusted_by_section {
+    margin-bottom: 32px
+  }
+
   div.gained_trusts {
     display: grid;
     grid-template-columns: repeat(2, 1fr);

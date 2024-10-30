@@ -174,7 +174,7 @@ get_header(); ?>
         <!-- trusted by section -->
         <section class="trusted_by_section">
             <div class="trusted_header_title">
-                <h2>Trusted By 50+ Companies</h2>
+                <h2 class="trusted_by_title">Trusted By 50+ Companies</h2>
             </div>
             <div class="gained_trusts">
                 <div class="company_gained_wrapper">
