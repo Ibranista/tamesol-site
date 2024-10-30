@@ -13,6 +13,8 @@ function tamesontheme_enqueue_styles()
     wp_enqueue_script('basic-script', get_template_directory_uri() . '/assets/scripts/basic.js', false);
     // frontpage styles
     wp_enqueue_style('frontpage-style', get_template_directory_uri() . '/assets/styles/frontpage.style.css');
+    // footer styles
+    wp_enqueue_style('footer-style', get_template_directory_uri() . '/assets/styles/footer.style.css');
     // gsap for the carousel section on front-page
     wp_enqueue_script(
         'gsap',
