@@ -86,6 +86,49 @@ get_header(); ?>
                 </div>
             </div>
         </section>
+        <!-- our services -->
+        <section class="our-services">
+            <h2>Our Services</h2>
+            <p class="subtitle">Transform your brand with our innovative digital solutions that captivate and engage your audience.</p>
+
+            <div class="services-container">
+                <div class="service-card">
+                    <div class="icon">
+                        <img src="<?php echo get_template_directory_uri(); ?>/assets/images/edit_pen_icon.svg" alt="Service Icon">
+                    </div>
+                    <h3>Marketing & Promotion</h3>
+                    <p>At Squareup, our design team is passionate about creating stunning, user-centric designs that captivate your audience and elevate your brand. We believe that great design is not just about aesthetics; it’s about creating seamless and intuitive user experiences.</p>
+                    <button>Learn More</button>
+                </div>
+
+                <div class="service-card">
+                    <div class="icon">
+                        <img src="<?php echo get_template_directory_uri(); ?>/assets/images/edit_pen_icon.svg" alt="Service Icon">
+                    </div>
+                    <h3>Radio & TV Production</h3>
+                    <p>At Squareup, our design team is passionate about creating stunning, user-centric designs that captivate your audience and elevate your brand. We believe that great design is not just about aesthetics; it’s about creating seamless and intuitive user experiences.</p>
+                    <button>Learn More</button>
+                </div>
+
+                <div class="service-card">
+                    <div class="icon">
+                        <img src="<?php echo get_template_directory_uri(); ?>/assets/images/edit_pen_icon.svg" alt="Service Icon">
+                    </div>
+                    <h3>Animation Services</h3>
+                    <p>At Squareup, our design team is passionate about creating stunning, user-centric designs that captivate your audience and elevate your brand. We believe that great design is not just about aesthetics; it’s about creating seamless and intuitive user experiences.</p>
+                    <button>Learn More</button>
+                </div>
+
+                <div class="service-card">
+                    <div class="icon">
+                        <img src="<?php echo get_template_directory_uri(); ?>/assets/images/edit_pen_icon.svg" alt="Service Icon">
+                    </div>
+                    <h3>Technology Solutions</h3>
+                    <p>At Squareup, our design team is passionate about creating stunning, user-centric designs that captivate your audience and elevate your brand. We believe that great design is not just about aesthetics; it’s about creating seamless and intuitive user experiences.</p>
+                    <button>Learn More</button>
+                </div>
+            </div>
+        </section>
     </main>
 </div>
 
