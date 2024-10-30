@@ -129,6 +129,19 @@ get_header(); ?>
                 </div>
             </div>
         </section>
+        <!-- past projects -->
+        <section class="previous-projects">
+            <div class="project-section">
+                <article class="project_img_wrapper">
+                    <img src="<?php echo get_template_directory_uri(); ?>/assets/images/previous_project.png" alt="Project Image">
+                </article>
+                <div class="past_projects_content">
+                    <h2 class="past_projects_title">Past Projects</h2>
+                    <p>In our 80+ years of operation, we've completed many successful projects in Ethiopia's different regions. Take a look to see what we can do for you!</p>
+                    <a href="#" class="btn">View All Projects</a>
+                </div>
+            </div>
+        </section>
     </main>
 </div>
 
