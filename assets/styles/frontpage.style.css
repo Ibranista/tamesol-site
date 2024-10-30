@@ -164,7 +164,6 @@ div.card_icon_wrapper {
 @media (max-width: 768px) {
   .cards {
     grid-template-columns: repeat(1, 1fr);
-
   }
 }
 
@@ -521,5 +520,40 @@ a.btn {
 @media (min-width: 768px) {
   .feedback-section {
     flex-direction: row;
+  }
+}
+
+/* trusted by section */
+section.trusted_by_section {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 33px;
+  padding-inline: 10px;
+  box-sizing: border-box;
+}
+
+div.company_gained_wrapper {
+  max-width: 313px;
+  width: 100%;
+}
+
+div.company_gained_wrapper img {
+  width: 100%;
+}
+
+div.gained_trusts {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+}
+
+@media (max-width:768px) {
+
+  /* trusted by section */
+  div.gained_trusts {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 32px;
+    margin-bottom: 32px;
   }
 }
