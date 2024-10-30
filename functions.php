@@ -11,5 +11,25 @@ function tamesontheme_enqueue_styles()
 {
     wp_enqueue_style('header-style', get_template_directory_uri() . '/assets/styles/header.style.css');
     wp_enqueue_script('basic-script', get_template_directory_uri() . '/assets/scripts/basic.js', false);
+    // frontpage styles
+    wp_enqueue_style('frontpage-style', get_template_directory_uri() . '/assets/styles/frontpage.style.css');
+    // gsap for the carousel section on front-page
+    wp_enqueue_script(
+        'gsap',
+        'https://cdnjs.cloudflare.com/ajax/libs/gsap/3.6.1/gsap.min.js',
+        [],
+        '3.6.1',
+        true
+    );
+    // zepto for the carousel section on front-page
+    wp_enqueue_script(
+        'zepto',
+        'https://cdnjs.cloudflare.com/ajax/libs/zepto/1.2.0/zepto.min.js',
+        [],
+        '1.2.0',
+        true // Load in footer
+    );
+    // script for carousel section on front-page
+    wp_enqueue_script('gsap_carousel-script', get_template_directory_uri() . '/assets/scripts/gsap_carousel.js', false);
 }
 add_action('wp_enqueue_scripts', 'tamesontheme_enqueue_styles');
