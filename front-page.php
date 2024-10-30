@@ -142,6 +142,35 @@ get_header(); ?>
                 </div>
             </div>
         </section>
+        <!-- client satisfaction -->
+        <section class="client_satisfaction_wrapper">
+            <img src="<?php echo get_template_directory_uri(); ?>/assets/images/star_icon.png" alt="star icon">
+            <h3>Positive Feedback</h3>
+            <h2>Client Satisfaction</h2>
+            <div class="feedback-section">
+                <div class="feedback-card">
+                    <p>Lorem ipsum dolor sit amet consectetur adipiscing elit, augue risus magnis parturient netus consequat per, mattis penatibus a.</p>
+                    <div class="client-info">
+                        <img src="<?php echo get_template_directory_uri(); ?>/assets/images/client_img.png" alt="Abebe Kebede">
+                        <h4>Abebe Kebede</h4>
+                    </div>
+                </div>
+                <div class="feedback-card">
+                    <p>Lorem ipsum dolor sit amet consectetur adipiscing elit, augue risus magnis parturient netus consequat per, mattis penatibus a.</p>
+                    <div class="client-info">
+                        <img src="<?php echo get_template_directory_uri(); ?>/assets/images/client_img.png" alt="Abraham Alem">
+                        <h4>Abraham Alem</h4>
+                    </div>
+                </div>
+                <div class="feedback-card">
+                    <p>Lorem ipsum dolor sit amet consectetur adipiscing elit, augue risus magnis parturient netus consequat per, mattis penatibus a.</p>
+                    <div class="client-info">
+                        <img src="<?php echo get_template_directory_uri(); ?>/assets/images/client_img.png" alt="Rahel Markos">
+                        <h4>Rahel Markos</h4>
+                    </div>
+                </div>
+            </div>
+        </section>
     </main>
 </div>
 
