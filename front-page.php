@@ -60,6 +60,32 @@ get_header(); ?>
                 </div>
             </div>
         </section>
+        <!-- who we are -->
+        <section class="who-we-are">
+            <div class="content">
+                <h2>Who We Are</h2>
+                <p>
+                    Tamseal Communications is a limited company that comprises a diverse set of knowledge, skills, and the necessary supporting technology to seamlessly deliver marketing and promotion campaigns.
+                    It also makes radio and TV programs and commercials, as well as documentary films. These are delivered using either our highly experienced production team using onsite and studio settings, as well as our acclaimed animation department, which excels at making animated features, series, as well as logos and intros in either 2D or 3D.
+                    Tamseal technology arm provides technology solutions such as conferencing equipment, telephony systems, IT equipment, networks, service support, and web design and development. This capability allows Tamseal to deliver high-quality service to a multitude of clients; ranging from senior government departments to regional governments, large multinationals, as well as prominent non-governmental non-profit organizations.
+                </p>
+            </div>
+            <div class="image-and-stats">
+                <div class="image">
+                    <img src="<?php echo get_template_directory_uri(); ?>/assets/images/who_we_are.jpg" alt="Who We Are">
+                </div>
+                <div class="stats">
+                    <div class="stat">
+                        <span class="stat-number">+50</span>
+                        <span class="stat-text">Projects Completed</span>
+                    </div>
+                    <div class="stat">
+                        <span class="stat-number">+8</span>
+                        <span class="stat-text">Years Experience</span>
+                    </div>
+                </div>
+            </div>
+        </section>
     </main>
 </div>
 
