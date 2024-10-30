@@ -12,10 +12,12 @@ html,
 .stage {
   overflow-x: hidden;
 }
+
 div.carousel_structure,
 svg {
   position: absolute;
 }
+
 .container {
   perspective: 2000px;
   width: 300px;
@@ -24,9 +26,9 @@ svg {
   top: 50%;
   transform: translate(-50%, -50%);
 }
+
 /*  */
-.hero_jumbotron {
-}
+.hero_jumbotron {}
 
 h1.connecting_stories {
   font-size: 2em;
@@ -84,5 +86,84 @@ p.message_crafts {
   .button {
     width: 100%;
     text-align: center;
+  }
+}
+
+/* mission-vision section styles */
+
+.vision-mission {
+  max-width: 80%;
+  width: 100%;
+  margin-inline: auto;
+  text-align: center;
+  padding: 2rem;
+  color: #333;
+}
+
+.vision-mission h2 {
+  font-size: 1.8rem;
+  margin-bottom: 0.5rem;
+}
+
+.vision-mission p {
+  font-size: 1rem;
+  margin-bottom: 1.5rem;
+  color: #555;
+}
+
+.vision-mission>p {
+  max-width: 1000px;
+  font-size: 18px;
+  line-height: 30.6px;
+}
+
+.cards {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 30px;
+}
+
+.card {
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-color: #fff;
+  border-radius: 8px;
+  text-align: center;
+  max-height: 259.38px;
+  max-width: 535px;
+  box-shadow: 0px 40px 120px rgba(0, 0, 0, 0.24);
+  padding-block: 10px;
+  padding-inline: 52px;
+}
+
+div.card_icon_wrapper {
+  width: 50px;
+  height: 50px;
+  margin-bottom: 1rem;
+  background: #2e4aa5;
+  border-radius: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-inline: auto;
+}
+
+.card h3 {
+  font-size: 1.2rem;
+  color: #333;
+  margin-bottom: 0.5rem;
+}
+
+.card p {
+  font-size: 0.9rem;
+  color: #555;
+}
+
+@media (max-width: 768px) {
+  .cards {
+    grid-template-columns: repeat(1, 1fr);
+
   }
 }

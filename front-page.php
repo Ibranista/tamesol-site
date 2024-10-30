@@ -6,7 +6,7 @@ get_header(); ?>
     <main id="main" class="site-main">
         <section
             class="hero_jumbotron"
-            style="position: relative; height: 100vh; overflow-y: hidden">
+            style="position: relative; overflow-y: hidden">
             <article
                 class="jumbo_header_intro"
                 style="display: flex; flex-direction: column; align-items: center">
@@ -37,6 +37,27 @@ get_header(); ?>
                 style="display: flex; justify-content: center; align-items: center">
                 <button class="button explore">Explore Our Works</button>
                 <button class="button">Contact Us</button>
+            </div>
+        </section>
+        <section class="vision-mission">
+            <h2>Our Vision And Mission</h2>
+            <p>Amplify important societal messages through innovative media solutions, connecting organizations with their audiences and driving positive change</p>
+
+            <div class="cards">
+                <div class="card">
+                    <div class="card_icon_wrapper">
+                        <img src="<?php echo get_template_directory_uri(); ?>/assets/images/vision_icon.svg" alt="Vision Icon" class="icon">
+                    </div>
+                    <h3>Vision</h3>
+                    <p>To be the leading media company, recognized for creativity, expertise, and commitment to impactful communication.</p>
+                </div>
+                <div class="card">
+                    <div class="card_icon_wrapper">
+                        <img src="<?php echo get_template_directory_uri(); ?>/assets/images/mission_icon.png" alt="Mission Icon" class="icon">
+                    </div>
+                    <h3>Mission</h3>
+                    <p>Our mission is to amplify the voices and messages that matter most to society through innovative media and technology solutions.</p>
+                </div>
             </div>
         </section>
     </main>
