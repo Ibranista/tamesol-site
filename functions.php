@@ -22,6 +22,8 @@ function tamesontheme_enqueue_styles()
     wp_enqueue_style('services-page-style', get_template_directory_uri() . '/assets/styles/services.style.css');
     // portfolio page
     wp_enqueue_style('portfolio-page-style', get_template_directory_uri() . '/assets/styles/portfolio.style.css');
+    // the team
+    wp_enqueue_style('our-team', get_template_directory_uri() . '/assets/styles/ourteam.style.css');
 
     wp_enqueue_script(
         'gsap',
