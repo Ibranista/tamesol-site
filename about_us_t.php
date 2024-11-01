@@ -10,13 +10,8 @@
 
 get_header();
 ?>
-<section class="about_page_wrapper">
-    <div class="about-section">
-        <h1>About Us</h1>
-        <p>Welcome to Tamesol, where collaboration, expertise, and client-centricity intersect to shape the future of digital innovation.</p>
-    </div>
-    <!-- about tamesol -->
-</section>
+<?php get_template_part('template-parts/jumbotron-section'); ?>
+
 <section class="about-content-wrapper">
     <article class="about_tamesol">
         <h1 class="about_tam_title">About Tamesol</h1>
