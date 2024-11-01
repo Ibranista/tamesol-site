@@ -161,6 +161,96 @@
   text-align: center;
 }
 
+/* why choose us */
+.why-choose-us-section {
+  max-width: 1100px;
+  margin-inline: auto;
+  margin-bottom: 157px;
+}
+
+.choose-us-box-wrapper {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+}
+
+.auditorium_img_wrapper {
+  max-width: 515px;
+  width: 100%;
+}
+
+.large_img_audit {
+  width: 100%;
+  max-width: 515px;
+  max-height: 344px;
+}
+
+.exp_title {
+  font-family: Poppins;
+  font-size: 19px;
+  font-weight: 700;
+  line-height: 26.6px;
+  text-align: left;
+  color: #363636;
+  border-left: 2px solid black;
+  padding-left: 20px;
+  max-width: 191px;
+  box-sizing: border-box;
+}
+
+.exp_detail {
+  font-family: Poppins;
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 27.2px;
+  text-align: left;
+  color: #363636;
+}
+
+.experience-cards,
+.camera_phone_img {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 32px;
+}
+
+.img_cards_wrapper {
+  padding: 6px;
+  max-height: 153px;
+  background: #ffffff;
+  /* add nice shadow */
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+}
+
+.camera_phone_img img {
+  width: 100%;
+  height: 100%;
+}
+
+.experience_card {
+  max-width: 238px;
+}
+
+/* explore-btn */
+.explore-btn {
+  max-width: 238.5px;
+  width: 100%;
+  padding: 15px 24px;
+  display: flex;
+  box-sizing: border-box;
+  gap: 8px;
+  align-items: center;
+  border-radius: 8px;
+}
+
+.explore-btn:hover .explore-right-arrow {
+  transform: translateX(5px);
+}
+
+.explore-right-arrow {
+  width: 40px;
+  transition: cubic-bezier(1, 0, 0, 1) 0.3s;
+}
+
 @media (max-width: 768px) {
   .about-content-wrapper {
     padding-inline: 30px;
@@ -184,5 +274,15 @@
 
   .our_values_container {
     grid-template-columns: 1fr;
+  }
+
+  .experience-cards {
+    grid-template-columns: 1fr;
+  }
+
+  .choose-us-box-wrapper {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
   }
 }
