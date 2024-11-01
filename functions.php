@@ -20,6 +20,9 @@ function tamesontheme_enqueue_styles()
     // gsap for the carousel section on front-page
     // services page
     wp_enqueue_style('services-page-style', get_template_directory_uri() . '/assets/styles/services.style.css');
+    // portfolio page
+    wp_enqueue_style('portfolio-page-style', get_template_directory_uri() . '/assets/styles/portfolio.style.css');
+
     wp_enqueue_script(
         'gsap',
         'https://cdnjs.cloudflare.com/ajax/libs/gsap/3.6.1/gsap.min.js',
