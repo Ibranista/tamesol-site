@@ -4,7 +4,7 @@ get_header(); ?>
 
 <div id="primary" class="content-area">
     <main id="main" class="site-main">
-        <section
+        <!-- <section
             class="hero_jumbotron"
             style="position: relative; overflow-y: hidden">
             <article
@@ -16,29 +16,53 @@ get_header(); ?>
                     solutions
                 </p>
             </article>
-            <!-- <div class="carousel_structure stage">
-                <div class="carousel_structure container">
-                    <div class="carousel_structure ring">
-                        <div class="carousel_structure hero_carousel_img"></div>
-                        <div class="carousel_structure hero_carousel_img"></div>
-                        <div class="carousel_structure hero_carousel_img"></div>
-                        <div class="carousel_structure hero_carousel_img"></div>
-                        <div class="carousel_structure hero_carousel_img"></div>
-                        <div class="carousel_structure hero_carousel_img"></div>
-                        <div class="carousel_structure hero_carousel_img"></div>
-                        <div class="carousel_structure hero_carousel_img"></div>
-                        <div class="carousel_structure hero_carousel_img"></div>
-                        <div class="carousel_structure hero_carousel_img"></div>
-                    </div>
-                </div>
-            </div> -->
-            <div
-                class="explor_btn_wrapper"
-                style="display: flex; justify-content: center; align-items: center">
-                <button class="button explore">Explore Our Works</button>
-                <button class="button">Contact Us</button>
+            <div class="responsive">
+                <div><img src="<?php echo get_template_directory_uri(); ?>/assets/images/test_image.jpg" class="carousel-image" alt="Slide 1"></div>
+                <div><img src="<?php echo get_template_directory_uri(); ?>/assets/images/test_image.jpg" class="carousel-image" alt="Slide 2"></div>
+                <div><img src="<?php echo get_template_directory_uri(); ?>/assets/images/test_image.jpg" class="carousel-image" alt="Slide 3"></div>
+                <div><img src="<?php echo get_template_directory_uri(); ?>/assets/images/test_image.jpg" class="carousel-image" alt="Slide 4"></div>
+                <div><img src="<?php echo get_template_directory_uri(); ?>/assets/images/test_image.jpg" class="carousel-image" alt="Slide 5"></div>
+                <div><img src="<?php echo get_template_directory_uri(); ?>/assets/images/test_image.jpg" class="carousel-image" alt="Slide 6"></div>
             </div>
+
+
+        </section> -->
+        <section class="main_hero_wrapper">
+            <section class="hero_main_section">
+                <article class="left_hero_section">
+                    <p class="hero_title">Connecting Stories, Creating Impact, Making a Difference</p>
+                    <p class="hero_desc">Expertly crafting your message through innovative media and technology solutions</p>
+                    <div
+                        class="explor_btn_wrapper"
+                        style="display: flex; align-items: center">
+                        <button class="button explore">Explore Our Works</button>
+                        <button class="button">Contact Us</button>
+                    </div>
+                </article>
+                <article class="right">
+                    <!-- <div class="img_wrapper_hero_jumbotron">
+                        <div class="responsive">
+                            <div><img src="<?php echo get_template_directory_uri(); ?>/assets/images/test_image.jpg" class="carousel-image" alt="Slide 1"></div>
+                            <div><img src="<?php echo get_template_directory_uri(); ?>/assets/images/test_image.jpg" class="carousel-image" alt="Slide 2"></div>
+                            <div><img src="<?php echo get_template_directory_uri(); ?>/assets/images/test_image.jpg" class="carousel-image" alt="Slide 3"></div>
+                            <div><img src="<?php echo get_template_directory_uri(); ?>/assets/images/test_image.jpg" class="carousel-image" alt="Slide 4"></div>
+                            <div><img src="<?php echo get_template_directory_uri(); ?>/assets/images/test_image.jpg" class="carousel-image" alt="Slide 5"></div>
+                            <div><img src="<?php echo get_template_directory_uri(); ?>/assets/images/test_image.jpg" class="carousel-image" alt="Slide 6"></div>
+                        </div>
+                        <div class="bottom_right_box"></div>
+                    </div> -->
+                    <div class="responsive">
+                        <div class="img_wrapper_hero_jumbotron"><img src="<?php echo get_template_directory_uri(); ?>/assets/images/test_image.jpg" class="carousel-image hero_section_img" alt="Slide 1"></div>
+                        <div class="img_wrapper_hero_jumbotron"><img src="<?php echo get_template_directory_uri(); ?>/assets/images/test_image.jpg" class="carousel-image hero_section_img" alt="Slide 2"></div>
+                        <div class="img_wrapper_hero_jumbotron"><img src="<?php echo get_template_directory_uri(); ?>/assets/images/test_image.jpg" class="carousel-image hero_section_img" alt="Slide 3"></div>
+                        <div class="img_wrapper_hero_jumbotron"><img src="<?php echo get_template_directory_uri(); ?>/assets/images/test_image.jpg" class="carousel-image hero_section_img" alt="Slide 4"></div>
+                        <div class="img_wrapper_hero_jumbotron"><img src="<?php echo get_template_directory_uri(); ?>/assets/images/test_image.jpg" class="carousel-image hero_section_img" alt="Slide 5"></div>
+                        <div class="img_wrapper_hero_jumbotron"><img src="<?php echo get_template_directory_uri(); ?>/assets/images/test_image.jpg" class="carousel-image hero_section_img" alt="Slide 6"></div>
+                    </div>
+                </article>
+            </section>
         </section>
+        </header>
         <section class="vision-mission">
             <h2>Our Vision And Mission</h2>
             <p>Amplify important societal messages through innovative media solutions, connecting organizations with their audiences and driving positive change</p>
