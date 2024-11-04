@@ -1,56 +1,39 @@
 <?php
+get_header();
+$hero_section = get_field('hero_section');
+if ($hero_section) {
+    $hero_title = $hero_section['hero-title'];
+    $hero_subtitle = $hero_section['hero-subtitle'];
+    $explore_btn = $hero_section['explore-btn'];
+    $contact_us_btn = $hero_section['contact-us-btn'];
+}
 
-get_header(); ?>
+$home_content = get_field('home-content');
+$mission_vision = get_field('mission-vision');
+$services_card = get_field('card');
+$client_satisfaction = get_field('client-satisfaction');
+?>
+<script>
+    console.log(<?php echo json_encode($client_satisfaction); ?>);
+</script>
 
 <div id="primary" class="content-area">
     <main id="main" class="site-main">
-        <!-- <section
-            class="hero_jumbotron"
-            style="position: relative; overflow-y: hidden">
-            <article
-                class="jumbo_header_intro"
-                style="display: flex; flex-direction: column; align-items: center">
-                <h1 class="connecting_stories">Connecting Stories, Creating Impact</h1>
-                <p class="message_crafts">
-                    Expertly crafting your message through innovative media and technology
-                    solutions
-                </p>
-            </article>
-            <div class="responsive">
-                <div><img src="<?php echo get_template_directory_uri(); ?>/assets/images/test_image.jpg" class="carousel-image" alt="Slide 1"></div>
-                <div><img src="<?php echo get_template_directory_uri(); ?>/assets/images/test_image.jpg" class="carousel-image" alt="Slide 2"></div>
-                <div><img src="<?php echo get_template_directory_uri(); ?>/assets/images/test_image.jpg" class="carousel-image" alt="Slide 3"></div>
-                <div><img src="<?php echo get_template_directory_uri(); ?>/assets/images/test_image.jpg" class="carousel-image" alt="Slide 4"></div>
-                <div><img src="<?php echo get_template_directory_uri(); ?>/assets/images/test_image.jpg" class="carousel-image" alt="Slide 5"></div>
-                <div><img src="<?php echo get_template_directory_uri(); ?>/assets/images/test_image.jpg" class="carousel-image" alt="Slide 6"></div>
-            </div>
-
-
-        </section> -->
         <section class="main_hero_wrapper">
             <section class="hero_main_section">
                 <article class="left_hero_section">
-                    <p class="hero_title">Connecting Stories, Creating Impact, Making a Difference</p>
-                    <p class="hero_desc">Expertly crafting your message through innovative media and technology solutions</p>
+                    <p class="hero_title">
+                        <?= $hero_title; ?>
+                    </p>
+                    <p class="hero_desc"><?= $hero_subtitle ?></p>
                     <div
                         class="explor_btn_wrapper"
                         style="display: flex; align-items: center">
-                        <button class="button explore">Explore Our Works</button>
-                        <button class="button">Contact Us</button>
+                        <button class="button explore"><?= $explore_btn ?></button>
+                        <button class="button"><?= $contact_us_btn ?></button>
                     </div>
                 </article>
                 <article class="right">
-                    <!-- <div class="img_wrapper_hero_jumbotron">
-                        <div class="responsive">
-                            <div><img src="<?php echo get_template_directory_uri(); ?>/assets/images/test_image.jpg" class="carousel-image" alt="Slide 1"></div>
-                            <div><img src="<?php echo get_template_directory_uri(); ?>/assets/images/test_image.jpg" class="carousel-image" alt="Slide 2"></div>
-                            <div><img src="<?php echo get_template_directory_uri(); ?>/assets/images/test_image.jpg" class="carousel-image" alt="Slide 3"></div>
-                            <div><img src="<?php echo get_template_directory_uri(); ?>/assets/images/test_image.jpg" class="carousel-image" alt="Slide 4"></div>
-                            <div><img src="<?php echo get_template_directory_uri(); ?>/assets/images/test_image.jpg" class="carousel-image" alt="Slide 5"></div>
-                            <div><img src="<?php echo get_template_directory_uri(); ?>/assets/images/test_image.jpg" class="carousel-image" alt="Slide 6"></div>
-                        </div>
-                        <div class="bottom_right_box"></div>
-                    </div> -->
                     <div class="responsive">
                         <div class="img_wrapper_hero_jumbotron"><img src="<?php echo get_template_directory_uri(); ?>/assets/images/test_image.jpg" class="carousel-image hero_section_img" alt="Slide 1"></div>
                         <div class="img_wrapper_hero_jumbotron"><img src="<?php echo get_template_directory_uri(); ?>/assets/images/test_image.jpg" class="carousel-image hero_section_img" alt="Slide 2"></div>
@@ -64,34 +47,32 @@ get_header(); ?>
         </section>
         </header>
         <section class="vision-mission">
-            <h2>Our Vision And Mission</h2>
-            <p>Amplify important societal messages through innovative media solutions, connecting organizations with their audiences and driving positive change</p>
+            <h2>
+                <?= $home_content[0]['content-header']; ?>
+            </h2>
+            <p>
+                <?= $home_content[0]['content-title']; ?>
+            </p>
 
             <div class="cards">
-                <div class="card">
-                    <div class="card_icon_wrapper">
-                        <img src="<?php echo get_template_directory_uri(); ?>/assets/images/vision_icon.svg" alt="Vision Icon" class="icon">
+
+                <?php foreach ($mission_vision as $mv) : ?>
+                    <div class="card">
+                        <div class="card_icon_wrapper">
+                            <img src="<?php echo get_template_directory_uri(); ?>/assets/images/vision_icon.svg" alt="Vision Icon" class="icon">
+                        </div>
+                        <h3><?= $mv['card-title']; ?></h3>
+                        <p><?= $mv['card-description']; ?></p>
                     </div>
-                    <h3>Vision</h3>
-                    <p>To be the leading media company, recognized for creativity, expertise, and commitment to impactful communication.</p>
-                </div>
-                <div class="card">
-                    <div class="card_icon_wrapper">
-                        <img src="<?php echo get_template_directory_uri(); ?>/assets/images/mission_icon.png" alt="Mission Icon" class="icon">
-                    </div>
-                    <h3>Mission</h3>
-                    <p>Our mission is to amplify the voices and messages that matter most to society through innovative media and technology solutions.</p>
-                </div>
+                <?php endforeach; ?>
             </div>
         </section>
         <!-- who we are -->
         <section class="who-we-are">
             <div class="content">
-                <h2>Who We Are</h2>
+                <?= $home_content[1]['content-header']; ?>
                 <p>
-                    Tamseal Communications is a limited company that comprises a diverse set of knowledge, skills, and the necessary supporting technology to seamlessly deliver marketing and promotion campaigns.
-                    It also makes radio and TV programs and commercials, as well as documentary films. These are delivered using either our highly experienced production team using onsite and studio settings, as well as our acclaimed animation department, which excels at making animated features, series, as well as logos and intros in either 2D or 3D.
-                    Tamseal technology arm provides technology solutions such as conferencing equipment, telephony systems, IT equipment, networks, service support, and web design and development. This capability allows Tamseal to deliver high-quality service to a multitude of clients; ranging from senior government departments to regional governments, large multinationals, as well as prominent non-governmental non-profit organizations.
+                    <?= $home_content[1]['content-desc']; ?>
                 </p>
             </div>
             <div class="image-and-stats">
@@ -100,7 +81,7 @@ get_header(); ?>
                 </div>
                 <div class="stats">
                     <div class="stat">
-                        <span class="stat-number">+50</span>
+                        <span class="stat-number">+100</span>
                         <span class="stat-text">Projects Completed</span>
                     </div>
                     <div class="stat">
@@ -110,50 +91,27 @@ get_header(); ?>
                 </div>
             </div>
         </section>
-        <!-- our services -->
+
         <section class="our-services">
             <h2>Our Services</h2>
             <p class="subtitle">Transform your brand with our innovative digital solutions that captivate and engage your audience.</p>
 
             <div class="services-container">
-                <div class="service-card">
-                    <div class="icon">
-                        <img src="<?php echo get_template_directory_uri(); ?>/assets/images/edit_pen_icon.svg" alt="Service Icon">
+                <?php foreach ($services_card as $service) : ?>
+                    <div class="service-card">
+                        <div class="icon">
+                            <img src="<?php echo get_template_directory_uri(); ?>/assets/images/edit_pen_icon.svg" alt="Service Icon">
+                        </div>
+                        <h3><?= $service['card-title']; ?></h3>
+                        <p><?= $service['card-content']; ?></p>
+                        <?php foreach ($service['card-buttons'] as $button) : ?>
+                            <button><?= $button['button-name']; ?></button>
+                        <?php endforeach; ?>
                     </div>
-                    <h3>Marketing & Promotion</h3>
-                    <p>At Squareup, our design team is passionate about creating stunning, user-centric designs that captivate your audience and elevate your brand. We believe that great design is not just about aesthetics; it’s about creating seamless and intuitive user experiences.</p>
-                    <button>Learn More</button>
-                </div>
-
-                <div class="service-card">
-                    <div class="icon">
-                        <img src="<?php echo get_template_directory_uri(); ?>/assets/images/edit_pen_icon.svg" alt="Service Icon">
-                    </div>
-                    <h3>Radio & TV Production</h3>
-                    <p>At Squareup, our design team is passionate about creating stunning, user-centric designs that captivate your audience and elevate your brand. We believe that great design is not just about aesthetics; it’s about creating seamless and intuitive user experiences.</p>
-                    <button>Learn More</button>
-                </div>
-
-                <div class="service-card">
-                    <div class="icon">
-                        <img src="<?php echo get_template_directory_uri(); ?>/assets/images/edit_pen_icon.svg" alt="Service Icon">
-                    </div>
-                    <h3>Animation Services</h3>
-                    <p>At Squareup, our design team is passionate about creating stunning, user-centric designs that captivate your audience and elevate your brand. We believe that great design is not just about aesthetics; it’s about creating seamless and intuitive user experiences.</p>
-                    <button>Learn More</button>
-                </div>
-
-                <div class="service-card">
-                    <div class="icon">
-                        <img src="<?php echo get_template_directory_uri(); ?>/assets/images/edit_pen_icon.svg" alt="Service Icon">
-                    </div>
-                    <h3>Technology Solutions</h3>
-                    <p>At Squareup, our design team is passionate about creating stunning, user-centric designs that captivate your audience and elevate your brand. We believe that great design is not just about aesthetics; it’s about creating seamless and intuitive user experiences.</p>
-                    <button>Learn More</button>
-                </div>
+                <?php endforeach; ?>
             </div>
         </section>
-        <!-- past projects -->
+
         <section class="previous-projects">
             <div class="project-section">
                 <article class="project_img_wrapper">
@@ -172,30 +130,17 @@ get_header(); ?>
             <h3>Positive Feedback</h3>
             <h2>Client Satisfaction</h2>
             <div class="feedback-section">
-                <div class="feedback-card">
-                    <p>Lorem ipsum dolor sit amet consectetur adipiscing elit, augue risus magnis parturient netus consequat per, mattis penatibus a.</p>
-                    <div class="client-info">
-                        <img src="<?php echo get_template_directory_uri(); ?>/assets/images/client_img.png" alt="Abebe Kebede">
-                        <h4>Abebe Kebede</h4>
+                <?php foreach ($client_satisfaction as $satisfaction) : ?>
+                    <div class="feedback-card">
+                        <p><?= $satisfaction['card-description']; ?></p>
+                        <div class="client-info">
+                            <img src="<?php echo get_template_directory_uri(); ?>/assets/images/client_img.png" alt="Abebe Kebede">
+                            <h4><?= $satisfaction['card-title']; ?></h4>
+                        </div>
                     </div>
-                </div>
-                <div class="feedback-card">
-                    <p>Lorem ipsum dolor sit amet consectetur adipiscing elit, augue risus magnis parturient netus consequat per, mattis penatibus a.</p>
-                    <div class="client-info">
-                        <img src="<?php echo get_template_directory_uri(); ?>/assets/images/client_img.png" alt="Abraham Alem">
-                        <h4>Abraham Alem</h4>
-                    </div>
-                </div>
-                <div class="feedback-card">
-                    <p>Lorem ipsum dolor sit amet consectetur adipiscing elit, augue risus magnis parturient netus consequat per, mattis penatibus a.</p>
-                    <div class="client-info">
-                        <img src="<?php echo get_template_directory_uri(); ?>/assets/images/client_img.png" alt="Rahel Markos">
-                        <h4>Rahel Markos</h4>
-                    </div>
-                </div>
+                <?php endforeach; ?>
             </div>
         </section>
-        <!-- import trusted-by part from template parts the file is trusted-by.php -->
         <?php get_template_part('template-parts/trusted-by'); ?>
     </main>
 </div>
