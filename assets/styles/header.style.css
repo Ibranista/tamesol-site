@@ -108,3 +108,68 @@ nav {
     width: 120px;
   }
 }
+
+/* media for 768px */
+@media (max-width: 768px) {
+
+  /* primary menu sidebar */
+  div.menu-main-menu-container ul.menu {
+    left: -100%;
+    transition: left 0.5s ease;
+  }
+
+  div.menu-main-menu-container ul.menu.show {
+    background: rgb(26, 63, 114);
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    min-height: 100vh;
+    overflow-y: auto;
+    max-width: 80%;
+    padding-top: 83px;
+    z-index: 100;
+    left: 0;
+    transition: left 0.5s ease;
+  }
+
+  .menu ul.menu.show li {
+    padding-block: 15px;
+    padding-left: 50px;
+    color: #fff !important;
+    border-bottom: 1px solid #ffffff9f;
+  }
+
+  ul.menu.show li:last-child {
+    border-bottom: none;
+  }
+
+  ul.menu.show li>a {
+    color: #fff !important;
+  }
+
+  ul.menu.show li::before {
+    margin-right: 20px;
+    width: 25px;
+    display: inline-block;
+  }
+
+  ul.menu.show li.about-us-link::before {
+    content: url('../images/about-us.svg');
+  }
+
+  ul.menu.show li.services-link::before {
+    content: url('../images/services.svg');
+  }
+
+  ul.menu.show li.portfolio-link::before {
+    content: url('../images/portfolio.svg');
+  }
+
+  ul.menu.show li.the-team-link::before {
+    content: url('../images/the-team.svg');
+  }
+
+  ul.menu.show li.home-link::before {
+    content: url('../images/house-icon.svg');
+  }
+}

@@ -106,7 +106,7 @@ p.hero-description {
 /* Responsive Styling */
 @media (max-width: 768px) {
     body {
-        padding: 10px;
+        /* padding: 10px; */
     }
 
     .services_card_section {

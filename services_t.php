@@ -11,7 +11,7 @@
 get_header();
 ?>
 <?php get_template_part('template-parts/jumbotron-section'); ?>
-<article class="services_main_wrapper">
+<article class="services_main_wrapper" style="margin-top: 52px;">
     <div class="services_card_section">
         <h2 class="section-title">Marketing and Branding Campaigns</h2>
         <div class="service-grid">

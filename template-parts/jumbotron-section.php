@@ -1,3 +1,4 @@
+</header>
 <section class="jumbotron-section-bg">
     <div class="jumbotron-wrapper">
         <h1 class="hero-title">Services</h1>
