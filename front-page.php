@@ -29,8 +29,8 @@ $client_satisfaction = get_field('client-satisfaction');
                     <div
                         class="explor_btn_wrapper"
                         style="display: flex; align-items: center">
-                        <button class="button explore"><?= $explore_btn ?></button>
-                        <button class="button"><?= $contact_us_btn ?></button>
+                        <a href="/tamesol_website/portfolio" style="color:#fff;text-decoration:none;"><button class="button explore"><?= $explore_btn ?></button></a>
+                        <a href="/" style="color:#fff;text-decoration:none;"><button class="button"><?= $contact_us_btn ?></button></a>
                     </div>
                 </article>
                 <article class="right">
@@ -69,27 +69,35 @@ $client_satisfaction = get_field('client-satisfaction');
         </section>
         <!-- who we are -->
         <section class="who-we-are">
-            <div class="content">
-                <?= $home_content[1]['content-header']; ?>
-                <p>
-                    <?= $home_content[1]['content-desc']; ?>
-                </p>
-            </div>
-            <div class="image-and-stats">
-                <div class="image">
-                    <img src="<?php echo get_template_directory_uri(); ?>/assets/images/who_we_are.jpg" alt="Who We Are">
+            <article class="who-we-are-inner">
+                <div class="content">
+                    <h2><?= $home_content[1]['content-header']; ?></h2>
+                    <!-- <p>
+                        <?= $home_content[1]['content-desc']; ?>
+                    </p> -->
+
+                    <p class="p1">We pride ourselves on <span class="highlight">serving top clients</span> with high-quality, trusted services that exceed expectations and drive success.</p>
+                    <p class="p3">We are dedicated to <span class="highlight">producing impactful content</span>.</p>
+                    <p class="p4">We offer <span class="highlight">diverse skills</span> and cutting-edge <span class="highlight">technology</span>.</p>
+                    <p class="p2">Our focus is on delivering <span class="highlight">innovative tech solutions</span>.</p>
+
                 </div>
-                <div class="stats">
-                    <div class="stat">
-                        <span class="stat-number">+100</span>
-                        <span class="stat-text">Projects Completed</span>
+                <div class="image-and-stats">
+                    <div class="image">
+                        <img src="<?php echo get_template_directory_uri(); ?>/assets/images/who_we_are.jpg" alt="Who We Are">
                     </div>
-                    <div class="stat">
-                        <span class="stat-number">+8</span>
-                        <span class="stat-text">Years Experience</span>
+                    <div class="stats">
+                        <div class="stat">
+                            <span class="stat-number">+100</span>
+                            <span class="stat-text">Projects Completed</span>
+                        </div>
+                        <div class="stat">
+                            <span class="stat-number">+8</span>
+                            <span class="stat-text">Years Experience</span>
+                        </div>
                     </div>
                 </div>
-            </div>
+            </article>
         </section>
 
         <section class="our-services">

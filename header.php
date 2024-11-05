@@ -21,7 +21,7 @@
         <section class="nav_wrapper">
             <nav class="d-flex justify-between items-center main-nav-wrapper">
                 <section class="logo_wrapper">
-                    <img src="<?php echo get_template_directory_uri(); ?>/assets/images/Logo.png" alt="Logo" />
+                    <a href="/tamesol_website"><img src="<?php echo get_template_directory_uri(); ?>/assets/images/Logo.png" alt="Logo" /></a>
                 </section>
 
                 <section id="site-navigation" class="nav_links">
