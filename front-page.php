@@ -14,7 +14,7 @@ $services_card = get_field('card');
 $client_satisfaction = get_field('client-satisfaction');
 ?>
 <script>
-    console.log(<?php echo json_encode($client_satisfaction); ?>);
+    console.log(<?php echo json_encode($services_card); ?>);
 </script>
 
 <div id="primary" class="content-area">
@@ -106,18 +106,17 @@ $client_satisfaction = get_field('client-satisfaction');
 
             <div class="services-container">
                 <?php foreach ($services_card as $service) : ?>
-                    <div class="service-card">
-                        <div class="icon">
-                            <img src="<?php echo get_template_directory_uri(); ?>/assets/images/edit_pen_icon.svg" alt="Service Icon">
-                        </div>
-                        <h3><?= $service['card-title']; ?></h3>
-                        <p><?= $service['card-content']; ?></p>
+                    <div class="service-card"
+                        style="background-image: url('<?php echo esc_url($service['card-image']['url']); ?>');">
+                        <h3><?php echo esc_html($service['card-title']); ?></h3>
+                        <p><?php echo esc_html($service['card-content']); ?></p>
                         <?php foreach ($service['card-buttons'] as $button) : ?>
-                            <button><?= $button['button-name']; ?></button>
+                            <button><?php echo esc_html($button['button-name']); ?></button>
                         <?php endforeach; ?>
                     </div>
                 <?php endforeach; ?>
             </div>
+
         </section>
 
         <section class="previous-projects">
@@ -128,7 +127,7 @@ $client_satisfaction = get_field('client-satisfaction');
                 <div class="past_projects_content">
                     <h2 class="past_projects_title">Past Projects</h2>
                     <p>In our 80+ years of operation, we've completed many successful projects in Ethiopia's different regions. Take a look to see what we can do for you!</p>
-                    <a href="#" class="btn">View All Projects</a>
+                    <a href="/tamesol_website/portfolio" class="btn">View All Projects</a>
                 </div>
             </div>
         </section>
