@@ -79,7 +79,7 @@ p.hero-description {
     color: #fff;
     padding-block: 100px;
     overflow: hidden;
-    /* Ensures the pseudo-element stays within bounds */
+    margin-top: 130px;
 }
 
 .jumbotron-section-bg::before {

@@ -18,26 +18,27 @@
 <body <?php body_class(); ?>>
 
     <header id="header" style="width:100%">
-        <nav class="d-flex justify-between items-center">
-            <section class="logo_wrapper">
-                <img src="<?php echo get_template_directory_uri(); ?>/assets/images/Logo.png" alt="Logo" />
-            </section>
+        <section class="nav_wrapper">
+            <nav class="d-flex justify-between items-center main-nav-wrapper">
+                <section class="logo_wrapper">
+                    <img src="<?php echo get_template_directory_uri(); ?>/assets/images/Logo.png" alt="Logo" />
+                </section>
 
-            <section id="site-navigation" class="nav_links">
-                <?php
-                wp_nav_menu(array(
-                    'theme_location' => 'primary',
-                    'menu_id'        => 'primary-menu',
-                ));
-                ?>
-            </section>
-            <section class="contact_wrapper">
-                <button class="contact_us_btn">Contact Us</button>
-            </section>
-            <div class="hamburger" id="toggle_menu">
-                <span></span>
-                <span></span>
-                <span></span>
-            </div>
-
-        </nav>
+                <section id="site-navigation" class="nav_links">
+                    <?php
+                    wp_nav_menu(array(
+                        'theme_location' => 'primary',
+                        'menu_id'        => 'primary-menu',
+                    ));
+                    ?>
+                </section>
+                <section class="contact_wrapper">
+                    <button class="contact_us_btn">Contact Us</button>
+                </section>
+                <div class="hamburger" id="toggle_menu">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </div>
+            </nav>
+        </section>

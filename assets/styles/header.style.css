@@ -7,7 +7,7 @@ body {
   font-family: barlow;
 }
 
-nav {
+section.nav_wrapper {
   max-width: 80%;
   margin: auto;
   padding: 10px 0;
@@ -41,13 +41,40 @@ nav {
 }
 
 .nav_links .menu-main-menu-container li {
-  padding: 0 15px;
+  padding: 0 15px 10px 15px;
   list-style-type: none;
+}
+
+ul.menu>li.menu-item {
+  position: relative;
+  font-size: 1.2em;
+}
+
+ul.menu>li.current-menu-item::before,
+ul.menu>li.menu-item:hover::before {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 60%;
+  height: 2px;
+  background-color: #264aa5;
+  transition: width 0.3s ease;
+}
+
+ul.menu>li.menu-item:hover::before {
+  width: 80%;
+  transition: width 0.3s ease;
 }
 
 .nav_links .menu-main-menu-container li a {
   text-decoration: none;
-  color: #000 !important;
+  color: #444;
+}
+
+.nav_links .menu-main-menu-container li:hover a {
+  color: #000;
 }
 
 .contact_us_btn {
@@ -110,8 +137,47 @@ nav {
   }
 }
 
+@media (min-width: 1024px) {
+
+  section.nav_wrapper {
+    max-width: 100%;
+    margin: auto;
+    padding: 0;
+    position: relative;
+    display: flex;
+    justify-content: center;
+  }
+
+  nav.main-nav-wrapper {
+    width: 100%;
+    padding-block: 30px;
+    transition: padding-block 0.5s ease;
+    position: fixed;
+    top: 0;
+    z-index: 1000;
+    justify-content: space-around;
+  }
+
+  nav.main-nav-wrapper.scrolled {
+    position: fixed;
+    padding-block: 10px;
+    background: white;
+    box-shadow: 0px 2px 4px #0000001f;
+  }
+
+  nav.main-nav-wrapper.scrolled ul.menu>li.menu-item {
+    position: relative;
+    font-size: 1em;
+    transition: font-size 0.5s ease;
+  }
+
+}
+
 /* media for 768px */
 @media (max-width: 768px) {
+  section.contact_wrapper>button.contact_us_btn {
+    display: none;
+  }
 
   /* primary menu sidebar */
   div.menu-main-menu-container ul.menu {

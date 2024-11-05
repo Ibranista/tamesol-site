@@ -49,7 +49,9 @@ article.right {
   height: 400px;
 }
 
-.main_hero_wrapper {}
+.main_hero_wrapper {
+  margin-top: 80px;
+}
 
 #header {
   background: linear-gradient(120deg, rgba(255, 255, 255, 1) 0%, rgba(0, 174, 238, 0.197) 83% 90%);
@@ -734,6 +736,10 @@ div.trusted_header_title>h2.trusted_by_title {
   .hero_section_img {
     height: 250px;
   }
+
+  section.main_hero_wrapper {
+    margin-top: 0;
+  }
 }
 
 @media (max-width: 576px) {
@@ -747,5 +753,11 @@ div.trusted_header_title>h2.trusted_by_title {
 
   .img_wrapper_hero_jumbotron {
     margin-top: 30px;
+  }
+}
+
+@media(max-width:400px) {
+  .right {
+    display: none;
   }
 }
