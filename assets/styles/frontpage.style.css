@@ -254,13 +254,19 @@ div.card_icon_wrapper {
 
 .who-we-are {
   background-color: #031A38;
+  background-image: url("../images/creative.svg");
+  background-repeat: no-repeat;
+  background-position: -50px -30px;
+  background-attachment: fixed;
 }
 
 .who-we-are-inner {
+  text-align: center;
   display: flex;
+  justify-content: center;
   align-items: center;
   gap: 20px;
-  padding: 35px 20px;
+  padding: 40px 20px;
   margin: auto;
   max-width: 80%;
   margin-inline: auto;
@@ -272,13 +278,15 @@ div.card_icon_wrapper {
 }
 
 .content h2 {
+  padding: 0;
+  margin: 0;
   font-size: 3em;
   margin-bottom: 10px;
   color: #fff;
 }
 
 .content p {
-  font-size: 1.6em;
+  font-size: 2em;
   color: white;
   line-height: 1.8;
   font-weight: bold;

@@ -76,13 +76,13 @@ $client_satisfaction = get_field('client-satisfaction');
                         <?= $home_content[1]['content-desc']; ?>
                     </p> -->
 
-                    <p class="p1">We pride ourselves on <span class="highlight">serving top clients</span> with high-quality, trusted services that exceed expectations and drive success.</p>
+                    <p class="p2">We deliver <span class="highlight">innovative tech solutions</span>.</p>
                     <p class="p3">We are dedicated to <span class="highlight">producing impactful content</span>.</p>
-                    <p class="p4">We offer <span class="highlight">diverse skills</span> and cutting-edge <span class="highlight">technology</span>.</p>
-                    <p class="p2">Our focus is on delivering <span class="highlight">innovative tech solutions</span>.</p>
-
+                    <p class="p4">We offer a combination of <span class="highlight">diverse skills</span> and cutting-edge <span class="highlight">technology</span>.</p>
+                    <p class="p1">We pride ourselves on <span class="highlight">serving top clients</span> with high-quality, trusted services that exceed expectations and drive success.</p>
                 </div>
-                <div class="image-and-stats">
+                <!-- <img src="<?php echo get_template_directory_uri(); ?>/assets/images/creative.svg" class="creative-icon" alt="Who We Are"> -->
+                <!-- <div class="image-and-stats">
                     <div class="image">
                         <img src="<?php echo get_template_directory_uri(); ?>/assets/images/who_we_are.jpg" alt="Who We Are">
                     </div>
@@ -96,7 +96,7 @@ $client_satisfaction = get_field('client-satisfaction');
                             <span class="stat-text">Years Experience</span>
                         </div>
                     </div>
-                </div>
+                </div> -->
             </article>
         </section>
 
