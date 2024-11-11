@@ -1,3 +1,9 @@
+*,
+.hero-description,
+p {
+    font-family: Barlow !important;
+}
+
 .portfolio_showcase_page {
     max-width: 1100px;
     margin-inline: auto;

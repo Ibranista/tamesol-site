@@ -76,11 +76,11 @@ $client_satisfaction = get_field('client-satisfaction');
                         <?= $home_content[1]['content-desc']; ?>
                     </p> -->
 
-                    <p class="p2">We deliver <span class="highlight">innovative tech solutions</span>.</p>
-                    <p class="p3">We are dedicated to <span class="highlight">producing impactful content</span>.</p>
-                    <p class="p4">We offer a combination of <span class="highlight">diverse skills</span> and cutting-edge <span class="highlight">technology</span>.</p>
-                    <p class="p1">We pride ourselves on <span class="highlight">serving top clients</span> with high-quality, trusted services that exceed expectations and drive success.</p>
+                    <p class="p2 affected">We deliver <span class="highlight">innovative tech solutions</span>.</p>
+                    <p class="p3 affected">We are dedicated to producing <span class="highlight">impactful content</span>.</p>
+                    <p class="p1 affected">We pride ourselves on serving top clients with <span class="highlight">high-quality</span> services.</p>
                 </div>
+
                 <!-- <img src="<?php echo get_template_directory_uri(); ?>/assets/images/creative.svg" class="creative-icon" alt="Who We Are"> -->
                 <!-- <div class="image-and-stats">
                     <div class="image">
@@ -97,6 +97,7 @@ $client_satisfaction = get_field('client-satisfaction');
                         </div>
                     </div>
                 </div> -->
+
             </article>
         </section>
 
@@ -126,28 +127,28 @@ $client_satisfaction = get_field('client-satisfaction');
                 </article>
                 <div class="past_projects_content">
                     <h2 class="past_projects_title">Past Projects</h2>
-                    <p>In our 80+ years of operation, we've completed many successful projects in Ethiopia's different regions. Take a look to see what we can do for you!</p>
+                    <p>In our 25+ years of operation, we've completed many successful projects in Ethiopia's different regions. Take a look to see what we can do for you!</p>
                     <a href="/tamesol_website/portfolio" class="btn">View All Projects</a>
                 </div>
             </div>
         </section>
         <!-- client satisfaction -->
-        <section class="client_satisfaction_wrapper">
+        <!-- <section class="client_satisfaction_wrapper">
             <img src="<?php echo get_template_directory_uri(); ?>/assets/images/star_icon.png" alt="star icon">
             <h3>Positive Feedback</h3>
             <h2>Client Satisfaction</h2>
-            <div class="feedback-section">
+            <div class="feedback-carousel">
                 <?php foreach ($client_satisfaction as $satisfaction) : ?>
-                    <div class="feedback-card">
-                        <p><?= $satisfaction['card-description']; ?></p>
+                    <article class="feedback-card">
                         <div class="client-info">
                             <img src="<?php echo get_template_directory_uri(); ?>/assets/images/client_img.png" alt="Abebe Kebede">
                             <h4><?= $satisfaction['card-title']; ?></h4>
                         </div>
-                    </div>
+                        <p><?= $satisfaction['card-description']; ?></p>
+                    </article>
                 <?php endforeach; ?>
             </div>
-        </section>
+        </section> -->
         <?php get_template_part('template-parts/trusted-by'); ?>
     </main>
 </div>

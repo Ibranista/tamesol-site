@@ -21,6 +21,33 @@ document.addEventListener("DOMContentLoaded", function () {
   }
 
   document.addEventListener("click", handleClickOutside);
+
+  const paragraphs = document.querySelectorAll(".affected");
+  const typingSpeed = 40;
+  const pauseBetweenParagraphs = 500;
+
+  function typeWriter(text, element, index = 0) {
+    if (index < text.length) {
+      element.innerHTML += text.charAt(index);
+      setTimeout(() => typeWriter(text, element, index + 1), typingSpeed);
+    }
+  }
+
+  function displayParagraphsSequentially(paragraphs, i = 0) {
+    if (i < paragraphs.length) {
+      const text = paragraphs[i].textContent;
+      paragraphs[i].innerHTML = "";
+      paragraphs[i].style.display = "block";
+      typeWriter(text, paragraphs[i]);
+      setTimeout(
+        () => displayParagraphsSequentially(paragraphs, i + 1),
+        text.length * typingSpeed + pauseBetweenParagraphs
+      );
+    }
+  }
+
+  paragraphs.forEach((p) => (p.style.display = "none"));
+  displayParagraphsSequentially(paragraphs);
 });
 
 window.addEventListener("scroll", () => {

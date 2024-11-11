@@ -1,3 +1,10 @@
+:root {
+  --brand-color: #25418A;
+  --dark-brand-color: #031A38;
+  --brand-secondary: #22A8E0;
+  --brand-light: #808181;
+}
+
 #admin-bar-inline-css {
   margin: 0 !important;
 }
@@ -59,7 +66,7 @@ ul.menu>li.menu-item:hover::before {
   transform: translateX(-50%);
   width: 60%;
   height: 2px;
-  background-color: #264aa5;
+  background-color: var(--brand-secondary);
   transition: width 0.3s ease;
 }
 
