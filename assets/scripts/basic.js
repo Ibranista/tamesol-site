@@ -48,6 +48,28 @@ document.addEventListener("DOMContentLoaded", function () {
 
   paragraphs.forEach((p) => (p.style.display = "none"));
   displayParagraphsSequentially(paragraphs);
+
+  document
+    .querySelector(".explore_events_btn_wrapper")
+    .addEventListener("click", function (event) {
+      console.log("clicked");
+      event.preventDefault();
+      const targetElement = document.querySelector("#event_section_wrapper");
+      const offset = 100;
+
+      const elementPosition =
+        targetElement.getBoundingClientRect().top + window.pageYOffset - offset;
+
+      window.scrollTo({
+        top: elementPosition,
+        behavior: "smooth",
+      });
+    });
+
+  document.querySelectorAll(".event_card_wrapper").forEach((card, index) => {
+    console.log("yellow==>", index);
+    card.style.zIndex = index + 1;
+  });
 });
 
 window.addEventListener("scroll", () => {

@@ -85,7 +85,7 @@ ul.menu>li.menu-item:hover::before {
 }
 
 .contact_us_btn {
-  background-color: #264aa5;
+  background-color: var(--brand-color);
   color: white;
   padding: 16px 24px;
   border: none;

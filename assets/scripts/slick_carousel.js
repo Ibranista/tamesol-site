@@ -81,7 +81,7 @@ jQuery(document).ready(function ($) {
 
 jQuery(document).ready(function ($) {
   $(".service-grid").slick({
-    dots: true,
+    dots: false,
     autoplay: true,
     arrows: true,
     infinite: true,
