@@ -1,6 +1,9 @@
 document.addEventListener("DOMContentLoaded", function () {
   const toggleMenuButton = document.querySelector("#toggle_menu");
   const navLinks = document.querySelector(".nav_links ul");
+  const ExploreEventsButton = document.querySelector(
+    ".explore_events_btn_wrapper"
+  );
   navLinks.classList.toggle("show");
 
   function toggleMenu() {
@@ -48,10 +51,8 @@ document.addEventListener("DOMContentLoaded", function () {
 
   paragraphs.forEach((p) => (p.style.display = "none"));
   displayParagraphsSequentially(paragraphs);
-
-  document
-    .querySelector(".explore_events_btn_wrapper")
-    .addEventListener("click", function (event) {
+  if (ExploreEventsButton) {
+    ExploreEventsButton.addEventListener("click", function (event) {
       console.log("clicked");
       event.preventDefault();
       const targetElement = document.querySelector("#event_section_wrapper");
@@ -65,6 +66,7 @@ document.addEventListener("DOMContentLoaded", function () {
         behavior: "smooth",
       });
     });
+  }
 
   document.querySelectorAll(".event_card_wrapper").forEach((card, index) => {
     console.log("yellow==>", index);

@@ -1,3 +1,10 @@
+:root {
+  --brand-color: #25418A;
+  --dark-brand-color: #031A38;
+  --brand-secondary: #22A8E0;
+  --brand-light: #808181;
+}
+
 .about_page_wrapper {
   position: relative;
   width: 100%;
@@ -119,6 +126,9 @@
   padding: 80px 20px;
   text-align: center;
   color: #fff;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-attachment: fixed;
 }
 
 .about_promises_wrapper::before {
@@ -139,10 +149,25 @@
   left: 0;
   right: 0;
   bottom: 0;
-  background: url("../images/promise_background.jpeg") no-repeat center/cover;
   background-attachment: fixed;
   opacity: 0.8;
   z-index: 0;
+}
+
+.why_us_title {
+  font-size: 37.8px;
+  font-weight: 700;
+  line-height: 52.92px;
+  text-align: center;
+  color: var(--dark-brand-color);
+}
+
+p.intro_desc {
+  font-size: 18px;
+  font-weight: 400;
+  line-height: 30.6px;
+  text-align: center;
+  color: var(--brand-light);
 }
 
 .about-section h1 {
