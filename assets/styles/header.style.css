@@ -57,6 +57,11 @@ ul.menu>li.menu-item {
   font-size: 1.2em;
 }
 
+ul.menu>li.menu-item:hover a {
+  color: var(--brand-secondary);
+  cursor: pointer !important;
+}
+
 ul.menu>li.current-menu-item::before,
 ul.menu>li.menu-item:hover::before {
   content: "";
