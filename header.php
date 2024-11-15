@@ -16,8 +16,26 @@
 </head>
 
 <body <?php body_class(); ?>>
-
+    <?php
+    $social_links = get_field('social_links', 'option');
+    ?>
     <header id="header" style="width:100%">
+        <div class="social_links_wrapper">
+            <ul class="social_links">
+                <?php
+                foreach ($social_links as $social_link) {
+                ?>
+                    <li class="social_link_item_wrapper">
+                        <a href="<?php echo $social_link['link-url']; ?>" target="_blank">
+                            <img src="<?php echo $social_link['social-icon']['url']; ?>" alt="<?php echo $social_link['link_label']; ?>" />
+                            <p><?= $social_link['link-label'] ?></p>
+                        </a>
+                    </li>
+                <?php
+                }
+                ?>
+            </ul>
+        </div>
         <section class="nav_wrapper">
             <nav class="d-flex justify-between items-center main-nav-wrapper">
                 <section class="logo_wrapper">

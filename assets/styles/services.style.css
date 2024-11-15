@@ -1,3 +1,10 @@
+:root {
+    --brand-color: #25418A;
+    --dark-brand-color: #031A38;
+    --brand-secondary: #22A8E0;
+    --brand-light: #808181;
+}
+
 .page-template-services_t #content {
     display: flex;
     flex-direction: column;
@@ -21,8 +28,16 @@
 
 .service-grid {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+    /* grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); */
     gap: 20px;
+}
+
+.service-image-wrapper img {
+    margin-inline: auto;
+}
+
+div.service-image-wrapper {
+    width: 100%;
 }
 
 .service-item {
@@ -32,6 +47,48 @@
     background-color: #f0f8ff;
     box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
     transition: transform 0.3s, box-shadow 0.3s;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    align-items: center;
+    height: 160px;
+    overflow-y: auto;
+    max-width: 230px;
+}
+
+.service-item::-webkit-scrollbar {
+    width: 5px;
+}
+
+.service-item::-webkit-scrollbar-thumb {
+    background-color: #d6ebfe;
+    outline: 1px solid #f0f8ff;
+    border-radius: 10px;
+}
+
+.service-item::-webkit-scrollbar-track {
+    background-color: #f1f1f1 !important;
+    border-radius: 10px;
+}
+
+
+div.service-grid button.slick-prev::before,
+div.service-grid button.slick-next::before {
+    color: var(--brand-secondary);
+}
+
+p.service-title {
+    font-size: 20px;
+    font-weight: 600;
+    margin-bottom: 10px;
+}
+
+p.service-general-description {
+    font-size: 16px;
+    font-weight: 400;
+    margin-bottom: 10px;
+    line-height: 1.5;
+    color: var(--brand-light);
 }
 
 .service-item:hover {
@@ -122,6 +179,10 @@ p.hero-description {
 
     .service-item {
         padding: 10px;
+        max-width: 80%;
+        display: flex !important;
+        justify-content: center;
+        margin-inline: auto;
     }
 
     .service-item img {

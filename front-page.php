@@ -13,9 +13,6 @@ $mission_vision = get_field('mission-vision');
 $services_card = get_field('card');
 $client_satisfaction = get_field('client-satisfaction');
 ?>
-<script>
-    console.log(<?php echo json_encode($client_satisfaction); ?>);
-</script>
 
 <div id="primary" class="content-area">
     <main id="main" class="site-main">
@@ -29,7 +26,7 @@ $client_satisfaction = get_field('client-satisfaction');
                     <div
                         class="explor_btn_wrapper"
                         style="display: flex; align-items: center">
-                        <a href="/tamesol_website/portfolio" style="color:#fff;text-decoration:none;"><button class="button explore"><?= $explore_btn ?></button></a>
+                        <a href="/tamesol_website/services" style="color:#fff;text-decoration:none;"><button class="button explore"><?= $explore_btn ?></button></a>
                         <a href="/" style="color:#fff;text-decoration:none;"><button class="button"><?= $contact_us_btn ?></button></a>
                     </div>
                 </article>
@@ -76,13 +73,13 @@ $client_satisfaction = get_field('client-satisfaction');
                         <?= $home_content[1]['content-desc']; ?>
                     </p> -->
 
-                    <p class="p1">We pride ourselves on <span class="highlight">serving top clients</span> with high-quality, trusted services that exceed expectations and drive success.</p>
-                    <p class="p3">We are dedicated to <span class="highlight">producing impactful content</span>.</p>
-                    <p class="p4">We offer <span class="highlight">diverse skills</span> and cutting-edge <span class="highlight">technology</span>.</p>
-                    <p class="p2">Our focus is on delivering <span class="highlight">innovative tech solutions</span>.</p>
-
+                    <p class="p2 affected">We deliver <span class="highlight">innovative tech solutions</span>.</p>
+                    <p class="p3 affected">We are dedicated to producing <span class="highlight">impactful content</span>.</p>
+                    <p class="p1 affected">We pride ourselves on serving top clients with <span class="highlight">high-quality</span> services.</p>
                 </div>
-                <div class="image-and-stats">
+
+                <!-- <img src="<?php echo get_template_directory_uri(); ?>/assets/images/creative.svg" class="creative-icon" alt="Who We Are"> -->
+                <!-- <div class="image-and-stats">
                     <div class="image">
                         <img src="<?php echo get_template_directory_uri(); ?>/assets/images/who_we_are.jpg" alt="Who We Are">
                     </div>
@@ -96,7 +93,8 @@ $client_satisfaction = get_field('client-satisfaction');
                             <span class="stat-text">Years Experience</span>
                         </div>
                     </div>
-                </div>
+                </div> -->
+
             </article>
         </section>
 
@@ -106,18 +104,17 @@ $client_satisfaction = get_field('client-satisfaction');
 
             <div class="services-container">
                 <?php foreach ($services_card as $service) : ?>
-                    <div class="service-card">
-                        <div class="icon">
-                            <img src="<?php echo get_template_directory_uri(); ?>/assets/images/edit_pen_icon.svg" alt="Service Icon">
-                        </div>
-                        <h3><?= $service['card-title']; ?></h3>
-                        <p><?= $service['card-content']; ?></p>
+                    <div class="service-card"
+                        style="background-image: url('<?php echo esc_url($service['card-image']['url']); ?>');">
+                        <h3><?php echo esc_html($service['card-title']); ?></h3>
+                        <p><?php echo esc_html($service['card-content']); ?></p>
                         <?php foreach ($service['card-buttons'] as $button) : ?>
-                            <button><?= $button['button-name']; ?></button>
+                            <button><?php echo esc_html($button['button-name']); ?></button>
                         <?php endforeach; ?>
                     </div>
                 <?php endforeach; ?>
             </div>
+
         </section>
 
         <section class="previous-projects">
@@ -127,28 +124,28 @@ $client_satisfaction = get_field('client-satisfaction');
                 </article>
                 <div class="past_projects_content">
                     <h2 class="past_projects_title">Past Projects</h2>
-                    <p>In our 80+ years of operation, we've completed many successful projects in Ethiopia's different regions. Take a look to see what we can do for you!</p>
-                    <a href="#" class="btn">View All Projects</a>
+                    <p>In our 25+ years of operation, we've completed many successful projects in Ethiopia's different regions. Take a look to see what we can do for you!</p>
+                    <a href="/tamesol_website/portfolio" class="btn">View All Projects</a>
                 </div>
             </div>
         </section>
         <!-- client satisfaction -->
-        <section class="client_satisfaction_wrapper">
+        <!-- <section class="client_satisfaction_wrapper">
             <img src="<?php echo get_template_directory_uri(); ?>/assets/images/star_icon.png" alt="star icon">
             <h3>Positive Feedback</h3>
             <h2>Client Satisfaction</h2>
-            <div class="feedback-section">
+            <div class="feedback-carousel">
                 <?php foreach ($client_satisfaction as $satisfaction) : ?>
-                    <div class="feedback-card">
-                        <p><?= $satisfaction['card-description']; ?></p>
+                    <article class="feedback-card">
                         <div class="client-info">
                             <img src="<?php echo get_template_directory_uri(); ?>/assets/images/client_img.png" alt="Abebe Kebede">
                             <h4><?= $satisfaction['card-title']; ?></h4>
                         </div>
-                    </div>
+                        <p><?= $satisfaction['card-description']; ?></p>
+                    </article>
                 <?php endforeach; ?>
             </div>
-        </section>
+        </section> -->
         <?php get_template_part('template-parts/trusted-by'); ?>
     </main>
 </div>
