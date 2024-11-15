@@ -1,9 +1,6 @@
 <?php
 $client_satisfaction = get_field('client-satisfaction', 'options');
 ?>
-<script>
-    console.log(<?php echo json_encode($client_satisfaction); ?>);
-</script>
 <section class="client_satisfaction_wrapper">
     <img src="<?php echo get_template_directory_uri(); ?>/assets/images/star_icon.png" alt="star icon">
     <h2>Trusted by <span style="color:#22A8E0">50+</span> Companies</h2>

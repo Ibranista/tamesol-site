@@ -1,10 +1,21 @@
 document.addEventListener("DOMContentLoaded", function () {
+  const scrollTopBtn = document.getElementById("scrollTopBtn");
+
+  scrollTopBtn.addEventListener("click", function () {
+    window.scrollTo({
+      top: 0,
+      behavior: "smooth",
+    });
+  });
+});
+
+document.addEventListener("DOMContentLoaded", function () {
   const toggleMenuButton = document.querySelector("#toggle_menu");
   const navLinks = document.querySelector(".nav_links ul");
   const ExploreEventsButton = document.querySelector(
     ".explore_events_btn_wrapper"
   );
-  navLinks.classList.toggle("show");
+  // navLinks.classList.toggle("show");
 
   function toggleMenu() {
     navLinks.classList.toggle("show");
@@ -53,7 +64,6 @@ document.addEventListener("DOMContentLoaded", function () {
   displayParagraphsSequentially(paragraphs);
   if (ExploreEventsButton) {
     ExploreEventsButton.addEventListener("click", function (event) {
-      console.log("clicked");
       event.preventDefault();
       const targetElement = document.querySelector("#event_section_wrapper");
       const offset = 100;
@@ -69,7 +79,6 @@ document.addEventListener("DOMContentLoaded", function () {
   }
 
   document.querySelectorAll(".event_card_wrapper").forEach((card, index) => {
-    console.log("yellow==>", index);
     card.style.zIndex = index + 1;
   });
 });

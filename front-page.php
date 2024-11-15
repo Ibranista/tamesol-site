@@ -13,9 +13,6 @@ $mission_vision = get_field('mission-vision');
 $services_card = get_field('card');
 $client_satisfaction = get_field('client-satisfaction');
 ?>
-<script>
-    console.log(<?php echo json_encode($services_card); ?>);
-</script>
 
 <div id="primary" class="content-area">
     <main id="main" class="site-main">
@@ -29,7 +26,7 @@ $client_satisfaction = get_field('client-satisfaction');
                     <div
                         class="explor_btn_wrapper"
                         style="display: flex; align-items: center">
-                        <a href="/tamesol_website/portfolio" style="color:#fff;text-decoration:none;"><button class="button explore"><?= $explore_btn ?></button></a>
+                        <a href="/tamesol_website/services" style="color:#fff;text-decoration:none;"><button class="button explore"><?= $explore_btn ?></button></a>
                         <a href="/" style="color:#fff;text-decoration:none;"><button class="button"><?= $contact_us_btn ?></button></a>
                     </div>
                 </article>

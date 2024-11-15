@@ -8,9 +8,6 @@ $contact_us_btn = $hero_section[0]['btn-left'];
 $hero_image = $hero_section[0]['hero-image'];
 
 ?>
-<script>
-    console.log('hero section==>', <?php echo json_encode($hero_section); ?>);
-</script>
 <!-- hero-section for services news and events -->
 </header>
 <!-- check if hero_section exists -->

@@ -161,16 +161,6 @@ p.message_crafts {
   h1.connecting_stories {
     font-size: 1.5em;
   }
-
-  .explor_btn_wrapper {
-    flex-direction: column;
-    gap: 10px;
-  }
-
-  .button {
-    width: 100%;
-    text-align: center;
-  }
 }
 
 /* mission-vision section styles */
@@ -537,8 +527,42 @@ button:hover {
 
 /* Responsive Design */
 @media (max-width: 768px) {
+  .explor_btn_wrapper {
+    flex-direction: column;
+    gap: 10px;
+  }
+
+  .explor_btn_wrapper button.button {
+    margin: 0;
+    width: 100%;
+  }
+
+  .explor_btn_wrapper a {
+    width: 100%;
+  }
+
   .services-container {
     grid-template-columns: repeat(1, 1fr);
+  }
+
+  .who-we-are-inner h2 {
+    font-size: 2.5em;
+  }
+
+  .who-we-are-inner p {
+    font-size: 1.5em;
+  }
+
+  .service-card {
+    background-size: cover;
+  }
+
+  h2.past_projects_title {
+    margin-inline: auto;
+  }
+
+  div.btn_wrapper_lets {
+    margin-inline: auto;
   }
 }
 
