@@ -119,15 +119,31 @@ div.btn_wrapper_lets {
   color: #fff;
 }
 
-div.bottom-bar > article.company_copy_right {
+div.bottom-bar>article.company_copy_right {
   display: flex;
   justify-content: space-between;
   padding-bottom: 40px;
   border-bottom: 1px solid #ffffff33;
 }
 
-div.bottom-bar > p.dev_by {
+div.bottom-bar>p.dev_by {
   padding-top: 20px;
+}
+
+/* social links style */
+
+.footer_social_links a {
+  color: #fff !important;
+  font-size: 1.5rem !important;
+  text-decoration: none !important;
+  display: flex !important;
+  align-items: center;
+  gap: 10px;
+}
+
+.footer_social_links a img {
+  width: 30px;
+  height: 30px;
 }
 
 @media (max-width: 768px) {

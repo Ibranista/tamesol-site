@@ -1,5 +1,7 @@
 <footer class="footer_wrapper">
-
+    <?php
+    $social_links = get_field('social_links', 'option');
+    ?>
     <div class="lets_talk">
         <h1 class="contact_us">CONTACT US TODAY TO DISCUSS HOW TAMESOL COMMUNICATIONS CAN HELP YOU ACHIEVE YOUR GOALS !</h1>
         <div class="btn_wrapper_lets">
@@ -25,11 +27,18 @@
                 <a href="#">Terms of Service</a>
                 <a href="#">Blog</a>
             </div>
-            <div class="social-media">
-                <h3>Social Media</h3>
-                <a href="#">&#x1F4F7;</a>
-                <a href="#">&#x1F4F1;</a>
-                <a href="#">&#x1F4E3;</a>
+            <div class="footer_social_links">
+                <h3>Social Links</h3>
+                <?php
+                foreach ($social_links as $social_link) {
+                ?>
+                    <a href="<?php echo $social_link['link-url']; ?>" target="_blank">
+                        <img src="<?php echo $social_link['social-icon']['url']; ?>" alt="<?php echo $social_link['link_label']; ?>" />
+                        <p><?= $social_link['link-label'] ?></p>
+                    </a>
+                <?php
+                }
+                ?>
             </div>
         </div>
         <div class="bottom-bar">
