@@ -191,6 +191,10 @@ ul.menu>li.menu-item:hover::before {
     display: none;
   }
 
+  body.page-template-events_t section.main_hero_wrapper {
+    margin-top: 90px !important;
+  }
+
   /* primary menu sidebar */
   div.menu-main-menu-container ul.menu {
     left: -100%;

@@ -1,4 +1,5 @@
 document.addEventListener("DOMContentLoaded", function () {
+  console.log("easy smooth.");
   const scrollTopBtn = document.getElementById("scrollTopBtn");
 
   scrollTopBtn.addEventListener("click", function () {

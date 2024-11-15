@@ -164,10 +164,21 @@
 }
 
 @media (max-width: 768px) {
+    h1.event_hero_title {
+        font-size: 1.5em;
+        margin: 0;
+    }
+
+    p.event_hero_description {
+        font-size: 1.2em;
+    }
+
     .event_card_wrapper {
         flex-direction: column;
         gap: 20px;
         padding: 30px;
+        padding-block: 5px;
+        top: 20px;
     }
 
     .event_content,
@@ -176,10 +187,14 @@
     }
 
     .event_content h1 {
-        font-size: 1.8em;
+        font-size: 1.5em;
     }
 
     .event_content p {
-        font-size: 0.95em;
+        font-size: 0.7em;
+    }
+
+    .event_image {
+        width: 100% !important;
     }
 }
