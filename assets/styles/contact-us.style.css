@@ -125,7 +125,20 @@ textarea {
 }
 
 /* Responsive design */
-@media (max-width: 480px) {
+@media (max-width: 768px) {
+
+    div.contact-form div.form-control label {
+        text-align: left;
+    }
+
+    .page-template-contact_us_t article.right {
+        width: 100%;
+    }
+
+    body.page-template-contact_us_t .main_hero_wrapper {
+        margin-top: 0;
+    }
+
     .form-group {
         flex-direction: column;
     }

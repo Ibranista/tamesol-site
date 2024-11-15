@@ -894,4 +894,8 @@ div.trusted_header_title>h2.trusted_by_title {
   .right {
     display: none;
   }
+
+  .page-template-contact_us_t article.right {
+    display: block;
+  }
 }

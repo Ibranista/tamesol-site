@@ -36,40 +36,40 @@ $hero_image = $hero_section[0]['hero-image'];
                                 <img src="<?= $img['hero-image']['url']; ?>" class="carousel-image hero_section_img" alt="<?= $img['hero-image']['alt']; ?>">
                             <?php endif; ?>
                             <!-- if contact us page -->
-                            <?php if ($current_page == 'Contact Us') : ?>
-                                <div class="contact-form">
-                                    <form>
-                                        <div class="form-group">
-                                            <div class="form-control">
-                                                <label for="first-name">First name</label>
-                                                <input type="text" id="first-name" placeholder="First name">
-                                            </div>
-                                            <div class="form-control">
-                                                <label for="last-name">Last name</label>
-                                                <input type="text" id="last-name" placeholder="Last name">
-                                            </div>
-                                        </div>
-                                        <div class="form-control">
-                                            <label for="email">Email</label>
-                                            <input type="email" id="email" placeholder="Email address">
-                                        </div>
-                                        <div class="form-group">
-                                        </div>
-                                        <div class="form-control">
-                                            <label for="message">Message</label>
-                                            <textarea id="message" placeholder="Leave us a message..."></textarea>
-                                        </div>
-                                        <div class="form-control checkbox-control">
-                                            <input type="checkbox" id="privacy-policy">
-                                            <label for="privacy-policy">You agree to our friendly <a href="#">privacy policy</a></label>
-                                        </div>
-                                        <button type="submit" class="submit-button">Send message</button>
-                                    </form>
-                                </div>
-                            <?php endif; ?>
                         </div>
                     <?php endforeach; ?>
                 </div>
+                <?php if ($current_page == 'Contact Us') : ?>
+                    <div class="contact-form">
+                        <form>
+                            <div class="form-group">
+                                <div class="form-control">
+                                    <label for="first-name">First name</label>
+                                    <input type="text" id="first-name" placeholder="First name">
+                                </div>
+                                <div class="form-control">
+                                    <label for="last-name">Last name</label>
+                                    <input type="text" id="last-name" placeholder="Last name">
+                                </div>
+                            </div>
+                            <div class="form-control">
+                                <label for="email">Email</label>
+                                <input type="email" id="email" placeholder="Email address">
+                            </div>
+                            <div class="form-group">
+                            </div>
+                            <div class="form-control">
+                                <label for="message">Message</label>
+                                <textarea id="message" placeholder="Leave us a message..."></textarea>
+                            </div>
+                            <div class="form-control checkbox-control">
+                                <input type="checkbox" id="privacy-policy">
+                                <label for="privacy-policy">You agree to our friendly <a href="#">privacy policy</a></label>
+                            </div>
+                            <button type="submit" class="submit-button">Send message</button>
+                        </form>
+                    </div>
+                <?php endif; ?>
             </article>
         </section>
     </section>
