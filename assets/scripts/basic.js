@@ -16,10 +16,14 @@ document.addEventListener("DOMContentLoaded", function () {
   const ExploreEventsButton = document.querySelector(
     ".explore_events_btn_wrapper"
   );
-  // navLinks.classList.toggle("show");
 
   function toggleMenu() {
     navLinks.classList.toggle("show");
+    if (navLinks.classList.contains("show")) {
+      document.body.style.overflow = "hidden";
+    } else {
+      document.body.style.overflow = "";
+    }
   }
 
   function handleClickOutside(event) {
@@ -28,6 +32,7 @@ document.addEventListener("DOMContentLoaded", function () {
       !toggleMenuButton.contains(event.target)
     ) {
       navLinks.classList.remove("show");
+      document.body.style.overflow = "";
     }
   }
 

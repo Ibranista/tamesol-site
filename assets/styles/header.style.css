@@ -232,8 +232,12 @@ ul.menu>li.menu-item:hover::before {
 
   ul.menu.show li::before {
     margin-right: 20px;
-    width: 25px;
+    width: 100%;
     display: inline-block;
+  }
+
+  ul.menu>li.menu-item:hover::before {
+    content: none;
   }
 
   ul.menu.show li.about-us-link::before {

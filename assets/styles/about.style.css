@@ -278,8 +278,33 @@ p.intro_desc {
 
 @media (max-width: 768px) {
   .about-content-wrapper {
-    padding-inline: 30px;
-    max-width: 400px;
+    box-sizing: border-box;
+    padding-inline: 15px;
+  }
+
+  .auditorium_img_wrapper img {
+    width: 100%;
+  }
+
+  .why_us_container button.explore-btn {
+    margin-inline: auto;
+    padding: 5px 20px;
+    justify-content: center;
+    margin-top: 20px;
+  }
+
+  .why_us_container button.explore-btn img {
+    width: 20px;
+  }
+
+  .why_us_container button.explore-btn p {
+    font-size: 1em;
+  }
+
+  .why-choose-us-section {
+    box-sizing: border-box;
+    padding-inline: 15px;
+    margin-bottom: 50px;
   }
 
   .our_values_container {
