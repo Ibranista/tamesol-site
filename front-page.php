@@ -26,8 +26,8 @@ $client_satisfaction = get_field('client-satisfaction');
                     <div
                         class="explor_btn_wrapper"
                         style="display: flex; align-items: center">
-                        <a href="/tamesol_website/services" style="color:#fff;text-decoration:none;"><button class="button explore"><?= $explore_btn ?></button></a>
-                        <a href="/" style="color:#fff;text-decoration:none;"><button class="button"><?= $contact_us_btn ?></button></a>
+                        <a href="<?php echo get_permalink(get_page_by_path('services')); ?>" style="color:#fff;text-decoration:none;"><button class="button explore"><?= $explore_btn ?></button></a>
+                        <a href="<?php echo get_permalink(get_page_by_path('contact-us')); ?>" style="color:#fff;text-decoration:none;"><button class="button"><?= $contact_us_btn ?></button></a>
                     </div>
                 </article>
                 <article class="right">
@@ -125,7 +125,7 @@ $client_satisfaction = get_field('client-satisfaction');
                 <div class="past_projects_content">
                     <h2 class="past_projects_title">Past Projects</h2>
                     <p>In our 25+ years of operation, we've completed many successful projects in Ethiopia's different regions. Take a look to see what we can do for you!</p>
-                    <a href="/tamesol_website/portfolio" class="btn">View All Projects</a>
+                    <a href="<?php echo get_permalink(get_page_by_path('services')); ?>" class="btn">View All Projects</a>
                 </div>
             </div>
         </section>

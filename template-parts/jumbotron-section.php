@@ -24,7 +24,7 @@ $hero_image = $hero_section[0]['hero-image'];
                     <div
                         class="explor_btn_wrapper"
                         style="display: flex; align-items: center">
-                        <a href="/" style="color:#fff;text-decoration:none;"><button class="button"><?= $contact_us_btn ?></button></a>
+                        <a href="<?php echo get_permalink(get_page_by_path('contact-us')); ?>"" style=" color:#fff;text-decoration:none;"><button class="button"><?= $contact_us_btn ?></button></a>
                     </div>
                 <?php endif; ?>
             </article>

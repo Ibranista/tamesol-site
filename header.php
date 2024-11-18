@@ -39,7 +39,7 @@
         <section class="nav_wrapper">
             <nav class="d-flex justify-between items-center main-nav-wrapper">
                 <section class="logo_wrapper">
-                    <a href="/tamesol_website"><img src="<?php echo get_template_directory_uri(); ?>/assets/images/Logo.png" alt="Logo" /></a>
+                    <a href="<?php echo esc_url(home_url('/')); ?>"><img src="<?php echo get_template_directory_uri(); ?>/assets/images/Logo.png" alt="Logo" /></a>
                 </section>
 
                 <section id="site-navigation" class="nav_links">
@@ -51,7 +51,11 @@
                     ?>
                 </section>
                 <section class="contact_wrapper">
-                    <button class="contact_us_btn">Contact Us</button>
+                    <button class="contact_us_btn">
+                        <a href="<?php echo get_permalink(get_page_by_path('contact-us')); ?>" style="color:#fff;text-decoration:none;">
+                            Contact Us
+                        </a>
+                    </button>
                 </section>
                 <div class="hamburger" id="toggle_menu">
                     <span></span>

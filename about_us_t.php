@@ -105,7 +105,7 @@ $bottom_image_two = $why_choose_us['bottom-image-two'];
                 </article>
             </div>
             <button class="explore-btn">
-                <p>Explore Our work</p>
+                <p><a href="<?php echo get_permalink(get_page_by_path('services')); ?>" style="color:#fff;text-decoration:none;font-weight:bold;">Explore Our work</a></p>
                 <img src="<?php echo get_template_directory_uri(); ?>/assets/images/icon-arrow-right.svg" alt="right_arrow" class="explore-right-arrow" />
             </button>
         </section>
