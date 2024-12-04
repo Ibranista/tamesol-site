@@ -5,6 +5,7 @@ $current_page = get_the_title();
 $hero_title = $hero_section[0]['hero-title'];
 $hero_subtitle = $hero_section[0]['hero-sub-title'];
 $contact_us_btn = $hero_section[0]['btn-left'];
+$explore_is_contact = $hero_section[0]['btn-right'];
 $hero_image = $hero_section[0]['hero-image'];
 
 ?>
@@ -20,11 +21,19 @@ $hero_image = $hero_section[0]['hero-image'];
                 </p>
                 <p class="hero_desc"><?= $hero_subtitle ?></p>
                 <!-- check if contact us button exists -->
-                <?php if ($contact_us_btn) : ?>
+                <?php if ($contact_us_btn && $current_page !== 'Home') : ?>
                     <div
                         class="explor_btn_wrapper"
                         style="display: flex; align-items: center">
                         <a href="<?php echo get_permalink(get_page_by_path('contact-us')); ?>"" style=" color:#fff;text-decoration:none;"><button class="button"><?= $contact_us_btn ?></button></a>
+                    </div>
+                <?php endif; ?>
+                <?php if ($current_page == 'Home') : ?>
+                    <div
+                        class="explor_btn_wrapper"
+                        style="display: flex; align-items: center">
+                        <a href="<?php echo get_permalink(get_page_by_path('services')); ?>"" style=" color:#fff;text-decoration:none;"><button class="button"><?= $contact_us_btn ?></button></a>
+                        <a href="<?php echo get_permalink(get_page_by_path('contact-us')); ?>" style="color:#fff;text-decoration:none;"><button class="button"><?= $explore_is_contact ?></button></a>
                     </div>
                 <?php endif; ?>
             </article>

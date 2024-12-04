@@ -1,5 +1,21 @@
 document.addEventListener("DOMContentLoaded", function () {
-  console.log("easy smooth.");
+  jQuery(document).ready(function ($) {
+    $('.toggle-text').on('click', function () {
+        var $this = $(this);
+        var $parent = $this.closest('.about_desc');
+        
+        if ($this.text() === 'Read More') {
+            $parent.find('.short-text').hide();
+            $parent.find('.full-text').show();
+            $this.text('Read Less');
+        } else {
+            $parent.find('.short-text').show();
+            $parent.find('.full-text').hide();
+            $this.text('Read More');
+        }
+    });
+});
+
   const scrollTopBtn = document.getElementById("scrollTopBtn");
 
   scrollTopBtn.addEventListener("click", function () {

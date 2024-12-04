@@ -38,15 +38,23 @@ $bottom_image_two = $why_choose_us['bottom-image-two'];
 
 <?php get_template_part('template-parts/jumbotron-section'); ?>
 
-<section class="about-content-wrapper">
+<section class="about_promises_wrapper"
+    style="background-image: url('<?= $promise_bg_img['url'] ?>');">
+<section class="about-content-wrapper about_tamesol_content_wrapper">
     <article class="about_tamesol">
         <h1 class="about_tam_title">
             <?= $page_title ?>
         </h1>
         <p class="about_desc">
-            <?= $page_description ?>
-        </p>
+    <span class="short-text"><?= substr($page_description, 0, 300); ?>...</span>
+    <span class="full-text" style="display: none;"><?= $page_description; ?></span>
+    <button class="toggle-text">Read More</button>
+</p>
+
     </article>
+</section>
+</section>
+<section class="about-content-wrapper">
     <article class="our_values_container">
         <div class="image_container">
             <img src="<?= $page_image['url'] ?>" alt="<?= $page_image['alt'] ?>" class="values_pic">
@@ -58,17 +66,6 @@ $bottom_image_two = $why_choose_us['bottom-image-two'];
             </p>
         </div>
     </article>
-</section>
-<section class="about_promises_wrapper"
-    style="background-image: url('<?= $promise_bg_img['url'] ?>');">
-    <div class="about-section">
-        <h1>
-            <?= $our_promise_title ?>
-        </h1>
-        <p>
-            <?= $our_promise_description ?>
-        </p>
-    </div>
 </section>
 <section class="why-choose-us-section">
     <h1 class="why_us_title">
