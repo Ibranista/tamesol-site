@@ -14,34 +14,10 @@ $services_card = get_field('card');
 $client_satisfaction = get_field('client-satisfaction');
 ?>
 
+<?php get_template_part('template-parts/jumbotron-section'); ?>
+
 <div id="primary" class="content-area">
-    <main id="main" class="site-main">
-        <section class="main_hero_wrapper">
-            <section class="hero_main_section">
-                <article class="left_hero_section">
-                    <p class="hero_title">
-                        <?= $hero_title; ?>
-                    </p>
-                    <p class="hero_desc"><?= $hero_subtitle ?></p>
-                    <div
-                        class="explor_btn_wrapper"
-                        style="display: flex; align-items: center">
-                        <a href="<?php echo get_permalink(get_page_by_path('services')); ?>" style="color:#fff;text-decoration:none;"><button class="button explore"><?= $explore_btn ?></button></a>
-                        <a href="<?php echo get_permalink(get_page_by_path('contact-us')); ?>" style="color:#fff;text-decoration:none;"><button class="button"><?= $contact_us_btn ?></button></a>
-                    </div>
-                </article>
-                <article class="right">
-                    <div class="responsive">
-                        <div class="img_wrapper_hero_jumbotron"><img src="<?php echo get_template_directory_uri(); ?>/assets/images/test_image.jpg" class="carousel-image hero_section_img" alt="Slide 1"></div>
-                        <div class="img_wrapper_hero_jumbotron"><img src="<?php echo get_template_directory_uri(); ?>/assets/images/test_image.jpg" class="carousel-image hero_section_img" alt="Slide 2"></div>
-                        <div class="img_wrapper_hero_jumbotron"><img src="<?php echo get_template_directory_uri(); ?>/assets/images/test_image.jpg" class="carousel-image hero_section_img" alt="Slide 3"></div>
-                        <div class="img_wrapper_hero_jumbotron"><img src="<?php echo get_template_directory_uri(); ?>/assets/images/test_image.jpg" class="carousel-image hero_section_img" alt="Slide 4"></div>
-                        <div class="img_wrapper_hero_jumbotron"><img src="<?php echo get_template_directory_uri(); ?>/assets/images/test_image.jpg" class="carousel-image hero_section_img" alt="Slide 5"></div>
-                        <div class="img_wrapper_hero_jumbotron"><img src="<?php echo get_template_directory_uri(); ?>/assets/images/test_image.jpg" class="carousel-image hero_section_img" alt="Slide 6"></div>
-                    </div>
-                </article>
-            </section>
-        </section>
+    <main id="main" class="site-main">=
         </header>
         <section class="vision-mission">
             <h2>

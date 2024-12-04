@@ -10,7 +10,7 @@ add_action('after_setup_theme', 'my_theme_setup');
 function tamesontheme_enqueue_styles()
 {
     wp_enqueue_style('header-style', get_template_directory_uri() . '/assets/styles/header.style.css');
-    wp_enqueue_script('basic-script', get_template_directory_uri() . '/assets/scripts/basic.js', false);
+    wp_enqueue_script('basic-script', get_template_directory_uri() . '/assets/scripts/basic.js',array('jquery', 'slick-carousel'), null, false);
     // frontpage styles
     wp_enqueue_style('frontpage-style', get_template_directory_uri() . '/assets/styles/frontpage.style.css');
     // footer styles
